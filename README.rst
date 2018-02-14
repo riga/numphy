@@ -20,7 +20,6 @@
    :alt: License
 
 
-
 Numphy provides simple access to physics objects (vectors, Lorentz vectors, points, etc.) backed by `NumPy <http://www.numpy.org>`_ arrays.
 
 
@@ -60,7 +59,6 @@ If you like to contribute, we are happy to receive pull requests. Just make sure
 .. code-block:: bash
 
    python -m unittest tests
-```
 
 
 Authors
