@@ -57,8 +57,9 @@ Contributing and Testing
 
 If you like to contribute, we are happy to receive pull requests. Just make sure to add a new test case and run them via:
 
-```bash
-> python -m unittest tests
+.. code-block:: bash
+
+   python -m unittest tests
 ```
 
 
