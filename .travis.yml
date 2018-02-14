@@ -1,0 +1,16 @@
+sudo: required
+
+dist: trusty
+
+services:
+  - docker
+
+matrix:
+  include:
+    - env: IMG=adreeve/python-numpy:latest
+
+install:
+  - docker pull $IMG
+
+script:
+  - docker run -t --rm -v `pwd`:/root/numphy -w /root/numphy $IMG python -m unittest tests

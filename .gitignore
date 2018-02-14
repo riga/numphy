@@ -1,0 +1,11 @@
+*.sublime-project
+*.sublime-workspace
+*.pyc
+*.log
+*.DS_Store
+*.pkl
+*.egg-info
+dist
+MANIFEST.in
+build
+docs/_build
