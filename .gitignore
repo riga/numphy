@@ -9,3 +9,5 @@ dist
 MANIFEST.in
 build
 docs/_build
+*.npy
+*.npz
