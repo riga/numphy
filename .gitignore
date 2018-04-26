@@ -5,9 +5,12 @@
 *.DS_Store
 *.pkl
 *.egg-info
-dist
-MANIFEST.in
-build
-docs/_build
 *.npy
 *.npz
+*.root
+
+dist
+build
+docs/_build
+
+MANIFEST.in

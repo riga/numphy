@@ -20,7 +20,7 @@
    :alt: License
 
 
-Numphy provides simple access to physics objects (vectors, Lorentz vectors, points, etc.) backed by `NumPy <http://www.numpy.org>`_ arrays.
+Numphy provides simple access to physics objects (particles, Lorentz vectors, points, etc.) backed by `NumPy <http://www.numpy.org>`_ arrays **and/or** `TensorFlow <http://www.tensorflow.org>`_ tensors.
 
 
 **Note**: This project is currently under development.
