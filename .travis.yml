@@ -10,7 +10,9 @@ jobs:
   include:
     - stage: lint
       script:
-        - echo "done"
+        - pip install -r requirements.txt
+        - pip install flake8
+        - flake8 numphy
 
     - stage: test
       services:
@@ -19,4 +21,4 @@ jobs:
         - IMG=adreeve/python-numpy:latest
       script:
         - docker pull $IMG
-        - docker run -t --rm -v `pwd`:/root/numphy -w /root/numphy $IMG "pip install -r requirements.txt && python -m unittest tests"
+        - docker run -t --rm -v `pwd`:/root/numphy -w /root/numphy $IMG bash -c "pip install -r requirements.txt && python -m unittest tests"
