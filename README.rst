@@ -66,7 +66,6 @@ Authors
 
 - `Marcel R. <https://github.com/riga>`__
 - `Benjamin F. <https://github.com/bfis>`__
-- `Erik G. <https://github.com/erikgeiser>`__
 
 
 .. marker-after-body

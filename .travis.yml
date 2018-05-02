@@ -11,9 +11,10 @@ language: python
 jobs:
   include:
     - stage: lint
-      script:
+      install:
         - pip install -r requirements.txt
         - pip install flake8
+      script:
         - flake8 numphy
 
     - stage: test
@@ -21,6 +22,7 @@ jobs:
         - docker
       env:
         - IMG=adreeve/python-numpy:latest
-      script:
+      install:
         - docker pull $IMG
+      script:
         - docker run -t --rm -v `pwd`:/root/numphy -w /root/numphy $IMG bash -c "pip install -r requirements.txt && python -m unittest tests"
