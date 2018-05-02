@@ -6,6 +6,8 @@ stages:
   - lint
   - test
 
+language: python
+
 jobs:
   include:
     - stage: lint
