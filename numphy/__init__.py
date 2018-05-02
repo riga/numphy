@@ -19,12 +19,10 @@ __all__ = [
     "Wrapper", "Trace", "DataProxy",
     "is_numpy", "is_tensorflow", "map_struct", "is_lazy_iterable", "no_value",
     "t", "HAS_NUMPY", "HAS_TENSORFLOW",
-    "LorentVector",
 ]
 
 
 # provisioning imports
 from numphy.core import *
 from numphy.util import *
-from numphy.hep import *
 
