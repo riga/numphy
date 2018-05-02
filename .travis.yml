@@ -2,15 +2,21 @@ sudo: required
 
 dist: trusty
 
-services:
-  - docker
+stages:
+  - lint
+  - test
 
-matrix:
+jobs:
   include:
-    - env: IMG=adreeve/python-numpy:latest
+    - stage: lint
+      script:
+        - echo "done"
 
-install:
-  - docker pull $IMG
-
-script:
-  - docker run -t --rm -v `pwd`:/root/numphy -w /root/numphy $IMG python -m unittest tests
+    - stage: test
+      services:
+        - docker
+      env:
+        - IMG=adreeve/python-numpy:latest
+      script:
+        - docker pull $IMG
+        - docker run -t --rm -v `pwd`:/root/numphy -w /root/numphy $IMG "pip install -r requirements.txt && python -m unittest tests"
