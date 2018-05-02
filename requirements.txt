@@ -1,2 +1,2 @@
-numpy>=1.13
-six>=1.10
+six
+wrapt

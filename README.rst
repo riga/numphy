@@ -20,7 +20,7 @@
    :alt: License
 
 
-Numphy provides simple access to physics objects (particles, Lorentz vectors, points, etc.) backed by `NumPy <http://www.numpy.org>`_ arrays **and/or** `TensorFlow <http://www.tensorflow.org>`_ tensors.
+Numphy provides simple access to physics objects (particles, Lorentz vectors, points, etc.) backed by `NumPy <http://www.numpy.org>`__ arrays **and/or** `TensorFlow <http://www.tensorflow.org>`__ tensors.
 
 
 **Note**: This project is currently under development.
@@ -35,7 +35,7 @@ First steps
 Installation and Dependencies
 -----------------------------
 
-Install via `pip <https://pypi.python.org/pypi/numphy>`_:
+Install via `pip <https://pypi.python.org/pypi/numphy>`__:
 
 .. code-block:: bash
 
@@ -47,8 +47,8 @@ NumPy is the only dependency.
 Development
 ===========
 
-- Source hosted at `GitHub <https://github.com/riga/numphy>`_
-- Report issues, questions, feature requests on `GitHub Issues <https://github.com/riga/numphy/issues>`_
+- Source hosted at `GitHub <https://github.com/riga/numphy>`__
+- Report issues, questions, feature requests on `GitHub Issues <https://github.com/riga/numphy/issues>`__
 
 
 Contributing and Testing
@@ -64,9 +64,9 @@ If you like to contribute, we are happy to receive pull requests. Just make sure
 Authors
 -------
 
-- `Marcel R. <https://github.com/riga>`_
-- `Benjamin F. <https://github.com/bfis>`_
-- `Erik G. <https://github.com/erikgeiser>`_
+- `Marcel R. <https://github.com/riga>`__
+- `Benjamin F. <https://github.com/bfis>`__
+- `Erik G. <https://github.com/erikgeiser>`__
 
 
 .. marker-after-body

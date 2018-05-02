@@ -13,7 +13,9 @@ this_dir = os.path.dirname(os.path.abspath(__file__))
 with open(os.path.join(this_dir, "README.rst"), "r") as f:
     long_description = f.read()
 
-keywords = ["numpy", "physics", "hep", , "numpy", "particle", "vector", "lorentz", "boost"]
+keywords = [
+    "numpy", "physics", "hep", "particle", "vector", "lorentz", "boost", "numpy", "tensorflow",
+]
 
 classifiers = [
     "Programming Language :: Python",
