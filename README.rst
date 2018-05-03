@@ -15,7 +15,7 @@
    :target: https://pypi.python.org/pypi/numphy
    :alt: Package version
 
-.. image:: https://img.shields.io/pypi/n/numphy.svg?style=flat
+.. image:: https://img.shields.io/github/license/riga/numphy.svg
    :target: https://pypi.python.org/pypi/numphy
    :alt: License
 
@@ -40,8 +40,6 @@ Install via `pip <https://pypi.python.org/pypi/numphy>`__:
 .. code-block:: bash
 
    pip install numphy
-
-NumPy is the only dependency.
 
 
 Development

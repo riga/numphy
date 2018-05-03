@@ -2,15 +2,17 @@ sudo: required
 
 dist: trusty
 
+language: python
+
 stages:
   - lint
   - test
 
-language: python
-
 jobs:
   include:
     - stage: lint
+      env:
+        - JOB=lint
       install:
         - pip install -r requirements.txt
         - pip install flake8
@@ -21,7 +23,19 @@ jobs:
       services:
         - docker
       env:
-        - IMG=adreeve/python-numpy:latest
+        - JOB=test_python2
+        - IMG=riga/py2-numpy
+      install:
+        - docker pull $IMG
+      script:
+        - docker run -t --rm -v `pwd`:/root/numphy -w /root/numphy $IMG bash -c "pip install -r requirements.txt && python -m unittest tests"
+
+    - stage: test
+      services:
+        - docker
+      env:
+        - JOB=test_python3
+        - IMG=riga/py3-numpy
       install:
         - docker pull $IMG
       script:

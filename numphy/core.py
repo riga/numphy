@@ -86,7 +86,7 @@ def map_struct(func, struct):
     elif HAS_NUMPY and isinstance(struct, np.ndarray):
         # object type
         if struct.dtype == "O":
-            n = reduce(mul, struct.shape, 1) if struct.shape else 0
+            n = six.moves.reduce(mul, struct.shape, 1) if struct.shape else 0
             if n == 0:
                 copy = np.array(None, dtype=struct.dtype)
                 copy[()] = map_struct(func, struct[()])
@@ -337,12 +337,12 @@ class Wrapper(object):
         return self.data
 
     def __getattr__(self, attr):
-        if not hasattr(self, "_attributes") or attr not in self._attributes:
+        if attr not in self._attributes:
             raise AttributeError("unknown attribute '{}'".format(attr))
         return self._attributes[attr]
 
     def __setattr__(self, attr, value):
-        if hasattr(self, "_attributes") and attr in self._attributes:
+        if attr not in self.__slots__ and attr in self._attributes:
             if isinstance(value, Wrapper):
                 self.sub(value, attr=attr)
             else:
@@ -380,7 +380,7 @@ class Wrapper(object):
         return self.data.__sizeof__()
 
     def __len__(self):
-        return len(self.data)
+        return 0 if self.is_empty() else len(self.data)
 
     def __array__(self, *args, **kwargs):
         return self.data.__array__(*args, **kwargs)
